@@ -1,12 +1,15 @@
 'use strict'
 
-function criarImagem(urlImagem){
+function criarImagem(imagem){
     const galeria = document.getElementById('galeria')
     const img = document.createElement('img')
-    img.src = urlImagem.url
+    const personagem = document.createElement('p')
+    img.src = imagem.url
+    personagem.textContent = imagem.nome
 
     galeria.appendChild(img)
 
+    document.documentElement.style.setProperty('--personagem', galeria.appendChild(personagem))
 }
 
 function carregarImagens(){
@@ -52,16 +55,7 @@ function carregarImagens(){
             url: './img/silver-chariot.png'
         },
 
-        // './img/star-platinium.png',
-        // './img/the-world.png',
-        // './img/magican-red.png',
-        // './img/crazy-diamond.png',
-        // './img/gold-experience.png',
-        // './img/hermit-purple.png',
-        // './img/hierophant-green.png',
-        // './img/killer-queen.png',
-        // './img/king-crimson.png',
-        // './img/silver-chariot.png'
+
     ]
 
     imagens.forEach(criarImagem)

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --personagem: attr(character);
+}
+
 body{
     background-color: black;
     color: white;
@@ -19,16 +23,10 @@ body{
     padding-block: 4px;
 }
 
-/* .container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.container p{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+p{
+    height: 3vh;
+    opacity: 70%;
+    content: var(--personagem);
+    font-size: 1rem;
     text-align: center;
-    background-color: #0009;
-    padding: 10px;
-} */
+}
